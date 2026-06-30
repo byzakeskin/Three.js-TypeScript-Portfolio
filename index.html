@@ -1,12 +1,423 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Three.js TypeScript Tutorials by Sean Bradley : https://sbcode.net/threejs</title>
+    <title>Beyza Nur Keskin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Peralta&family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
   </head>
-
   <body>
+
+    <div id="loader">
+      <div class="loader-bar-track">
+        <div class="loader-bar" id="loader-bar"></div>
+      </div>
+    </div>
+
+    <div id="hint">
+      <div class="hint-mouse"><div class="hint-mouse-btn"></div></div>
+      <p>Çevreyi keşfetmek için dokun!</p>
+    </div>
+
+    <header id="site-header">
+      <a href="/index.html" class="header-logo"><span>Beyza Nur Keskin</span></a>
+      <nav>
+        <a href="#about">Hakkımda</a>
+        <span class="nav-dot">·</span>
+        <a href="#education">Eğitim</a>
+        <span class="nav-dot">·</span>
+        <a href="#experience">Deneyimler</a>
+        <span class="nav-dot">·</span>
+        <a href="#projects">Projeler</a>
+        <span class="nav-dot">·</span>
+        <a href="#skills">Yetenekler</a>
+        <span class="nav-dot">·</span>
+        <a href="#contact">İletişim</a>
+      </nav>
+    </header>
+
+    <main id="main-content">
+
+      <!-- Hakkımda -->
+      <section id="about" class="section-panel">
+        <div class="about-scene" id="about-card">
+          <div class="about-main-card">
+            <div class="about-main">
+              <p>Ben Beyza Nur Keskin. Bilgisayar Mühendisliği mezunuyum. 3D tasarımlar ve web geliştirme konuları üzerinde çalışıyorum. Beni daha yakından tanımak için <a href="#education" id="education-link-inline">web sitemi inceleyebilirsiniz</a>. Öz geçmişimi görüntülemek ve indirmek için lütfen 
+                <a
+    href="/resume/Beyza_Nur_Keskin_CV.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    id="resume-link-inline"
+>
+    tıklayın
+</a>.</p>
+            </div>
+          </div>
+          <div class="about-img-circle">
+            <img src="/images/s.png" alt="foto" draggable="false" />
+          </div>
+          <div class="about-deco">✦</div>
+          <div class="about-title">
+            <svg class="about-title-svg" viewBox="0 0 180 60" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="4" width="172" height="52" rx="12" ry="12" fill="#e07a5f" stroke="rgba(242,204,143,0.3)" stroke-width="1"/>
+              <text x="90" y="38" text-anchor="middle" font-family="Lobster, cursive" font-size="24" fill="#f4f1de">Merhaba!</text>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- Eğitim -->
+      <section id="education" class="section-panel section-education">
+        <div class="edu-split">
+          <div class="edu-half">
+            <img src="/images/akü.jpg" alt="1. Okul" draggable="false" />
+            <div class="edu-overlay">
+              <span class="edu-label">Yüksek Lisans</span>
+              <h3>Afyon Kocatepe Üniversitesi</h3>
+              <p>Bilgisayar Mühendisliği</p>
+              <p class="edu-date">2026 – devam ediyor</p>
+            </div>
+          </div>
+          <div class="edu-half">
+            <img src="/images/thkü.jpg" alt="2. Okul" draggable="false" />
+            <div class="edu-overlay">
+              <span class="edu-label">Lisans</span>
+              <h3>Türk Hava Kurumu Üniversitesi</h3>
+              <p>Bilgisayar Mühendisliği</p>
+              <p class="edu-date">2019 – 2025</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Deneyimler -->
+      <section id="experience" class="section-panel section-experience">
+        <div class="exp-track">
+          <div class="exp-carousel">
+
+            <div class="exp-card">
+              <div class="exp-card-inner">
+                <div class="exp-card-front">
+                  <div class="exp-img"><img src="/images/natur.png" alt="Natur Stone" draggable="false"/></div>
+                  <div class="exp-info">
+                    <span class="exp-label">2026 – Günümüz</span>
+                    <h3>Natur Stone Madencilik</h3>
+                    <p>Proje Asistanı / CAD Çizimcisi</p>
+                    <span class="exp-front-flip">↩ Çevir</span>
+                  </div>
+                </div>
+                <div class="exp-card-back">
+                  <span class="exp-back-label">2026 – Günümüz</span>
+                  <p class="exp-back-title">Natur Stone Madencilik</p>
+                  <p class="exp-back-role">Proje Asistanı / CAD Çizimcisi</p>
+                  <p class="exp-back-desc">Sorumluluklarım; AutoCAD çizimlerini analiz etmek ve Rhinoceros kullanarak 3D modellere dönüştürmek, üretilen ürünlere yönelik maliyet analizi ve fiyatlandırma stratejilerine destek vermek, üretim ve operasyonel verilerin takibi için Excel tabanlı raporlar oluşturmak.</p>
+                  <span class="exp-back-close">↩ Geri</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="exp-card">
+              <div class="exp-card-inner">
+                <div class="exp-card-front">
+                  <div class="exp-img"><img src="/images/w3.png" alt="Çetintaş" draggable="false"/></div>
+                  <div class="exp-info">
+                    <span class="exp-label">2023 – 2024</span>
+                    <h3>Çetintaş Yazılım A.Ş.</h3>
+                    <p>Jr. Backend Developer</p>
+                    <span class="exp-front-flip">↩ Çevir</span>
+                  </div>
+                </div>
+                <div class="exp-card-back">
+                  <p class="exp-back-title">Çetintaş Yazılım A.Ş.</p>
+                  <p class="exp-back-role">Jr. Backend Developer (Workcube Coder)</p>
+                  <p class="exp-back-desc">Sorumluluklarım; ColdFusion tabanlı yazılımda hata ayıklama ve iyileştirme yapmak, veri işleme, raporlama ve veri temizleme iş akışlarına yönelik SQL Server sorguları tasarlamak, ekipler arası iş birliğinde bulunmak.</p>
+                  <span class="exp-back-close">↩ Geri</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="exp-card">
+              <div class="exp-card-inner">
+                <div class="exp-card-front">
+                  <div class="exp-img"><img src="/images/eas.jpg" alt="Easy Clap" draggable="false"/></div>
+                  <div class="exp-info">
+                    <span class="exp-label">2023 – 2024</span>
+                    <h3>Easy Clap Games</h3>
+                    <p>Jr. Game Developer</p>
+                    <span class="exp-front-flip">↩ Çevir</span>
+                  </div>
+                </div>
+                <div class="exp-card-back">
+                  <p class="exp-back-title">Easy Clap Games</p>
+                  <p class="exp-back-role">Jr. Game Developer</p>
+                  <p class="exp-back-desc">Sorumluluklarım; Unity hyper-casual mobil oyun geliştirme süreçlerine katkıda bulunmak, yapay zekayı sanal ortamlarla entegre eden, TÜBİTAK destekli (Forensics VR "3230721 - TÜBİTAK Genetik Eğitimi için Yapay Zeka Destekli Sanal Gerçeklik Uygulaması Geliştirilmesi) projesinde yer almak</p>
+                  <span class="exp-back-close">↩ Geri</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="exp-card">
+              <div class="exp-card-inner">
+                <div class="exp-card-front">
+                  <div class="exp-img"><img src="/images/esen.jpg" alt="ESEN" draggable="false"/></div>
+                  <div class="exp-info">
+                    <span class="exp-label">2022 – 2023</span>
+                    <h3>ESEN Sistem Entegrasyon</h3>
+                    <p>Stajyer Bilgisayar Mühendisi</p>
+                    <span class="exp-front-flip">↩ Çevir</span>
+                  </div>
+                </div>
+                <div class="exp-card-back">
+                  <p class="exp-back-title">ESEN Sistem Entegrasyon</p>
+                  <p class="exp-back-role">Stajyer Bilgisayar Mühendisi</p>
+                  <p class="exp-back-desc">Sorumluluklarım; Nesne yönelimli programlama ile C++ kullanarak algoritmalar geliştirmek ve optimizasyon yapmak; modüler tasarım ilkeleriyle kod yapısını ve sürdürülebilirliği iyileştirmek.</p>
+                  <span class="exp-back-close">↩ Geri</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Loop kopyaları -->
+            <div class="exp-card">
+              <div class="exp-card-inner">
+                <div class="exp-card-front">
+                  <div class="exp-img"><img src="/images/natur.png" alt="Natur Stone" draggable="false"/></div>
+                  <div class="exp-info">
+                    <span class="exp-label">2026 – Günümüz</span>
+                    <h3>Natur Stone Madencilik</h3>
+                    <p>Proje Asistanı / CAD Çizimcisi</p>
+                    <span class="exp-front-flip">↩ Çevir</span>
+                  </div>
+                </div>
+                <div class="exp-card-back">
+                  <p class="exp-back-title">Natur Stone Madencilik</p>
+                  <p class="exp-back-role">Proje Asistanı / CAD Çizimcisi</p>
+                  <p class="exp-back-desc">Sorumluluklarım; AutoCAD çizimlerini analiz etmek ve Rhinoceros kullanarak 3D modellere dönüştürmek, üretilen ürünlere yönelik maliyet analizi ve fiyatlandırma stratejilerine destek vermek, üretim ve operasyonel verilerin takibi için Excel tabanlı raporlar oluşturmak.</p>
+                  <span class="exp-back-close">↩ Geri</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="exp-card">
+              <div class="exp-card-inner">
+                <div class="exp-card-front">
+                  <div class="exp-img"><img src="/images/w3.png" alt="Çetintaş" draggable="false"/></div>
+                  <div class="exp-info">
+                    <span class="exp-label">2023 – 2024</span>
+                    <h3>Çetintaş Yazılım A.Ş.</h3>
+                    <p>Jr. Backend Developer</p>
+                    <span class="exp-front-flip">↩ Çevir</span>
+                  </div>
+                </div>
+                <div class="exp-card-back">
+                  <p class="exp-back-title">Çetintaş Yazılım A.Ş.</p>
+                  <p class="exp-back-role">Jr. Backend Developer (Workcube Coder)</p>
+                  <p class="exp-back-desc">Sorumluluklarım; ColdFusion tabanlı yazılımda hata ayıklama ve iyileştirme yapmak, veri işleme, raporlama ve veri temizleme iş akışlarına yönelik SQL Server sorguları tasarlamak, ekipler arası iş birliğinde bulunmak.</p>
+                  <span class="exp-back-close">↩ Geri</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="exp-card">
+              <div class="exp-card-inner">
+                <div class="exp-card-front">
+                  <div class="exp-img"><img src="/images/eas.jpg" alt="Easy Clap" draggable="false"/></div>
+                  <div class="exp-info">
+                    <span class="exp-label">2023 – 2024</span>
+                    <h3>Easy Clap Games</h3>
+                    <p>Jr. Game Developer</p>
+                    <span class="exp-front-flip">↩ Çevir</span>
+                  </div>
+                </div>
+                <div class="exp-card-back">
+                  <p class="exp-back-title">Easy Clap Games</p>
+                  <p class="exp-back-role">Jr. Game Developer</p>
+                  <p class="exp-back-desc">Sorumluluklarım; Unity hyper-casual mobil oyun geliştirme süreçlerine katkıda bulunmak, yapay zekayı sanal ortamlarla entegre eden, TÜBİTAK destekli (Forensics VR "3230721 - TÜBİTAK Genetik Eğitimi için Yapay Zeka Destekli Sanal Gerçeklik Uygulaması Geliştirilmesi) projesinde yer almak.</p>
+                  <span class="exp-back-close">↩ Geri</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="exp-card">
+              <div class="exp-card-inner">
+                <div class="exp-card-front">
+                  <div class="exp-img"><img src="/images/esen.jpg" alt="ESEN" draggable="false"/></div>
+                  <div class="exp-info">
+                    <span class="exp-label">2022 – 2023</span>
+                    <h3>ESEN Sistem Entegrasyon</h3>
+                    <p>Stajyer Bilgisayar Mühendisi</p>
+                    <span class="exp-front-flip">↩ Çevir</span>
+                  </div>
+                </div>
+                <div class="exp-card-back">
+                  <p class="exp-back-title">ESEN Sistem Entegrasyon</p>
+                  <p class="exp-back-role">Stajyer Bilgisayar Mühendisi</p>
+                  <p class="exp-back-desc">Sorumluluklarım; Nesne yönelimli programlama ile C++ kullanarak algoritmalar geliştirmek ve optimizasyon yapmak; modüler tasarım ilkeleriyle kod yapısını ve sürdürülebilirliği iyileştirmek.</p>
+                  <span class="exp-back-close">↩ Geri</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Projeler -->
+      <section id="projects" class="section-panel section-projects">
+
+        <!-- Ana menü -->
+        <div class="proj-menu" id="proj-menu">
+          <p class="proj-menu-sub">Kategoriler</p>
+          <button class="proj-menu-item" data-cat="masters">Yüksek Lisans Projelerim</button>
+          <button class="proj-menu-item" data-cat="web">Web Projeleri</button>
+          <button class="proj-menu-item" data-cat="playable">Playable Ads</button>
+        </div>
+
+        <!-- Yüksek Lisans -->
+        <div class="proj-grid hidden" id="proj-masters">
+          <button class="proj-back" data-back>← Geri</button>
+          <div class="proj-cards">
+            <div class="proj-card">
+              <div class="proj-card-info"><h3>Galaksi Segmentasyonunda Sürü Zekası ve Green AI Yaklaşımları</h3><p>Bu proje, galaksi segmentasyonu problemlerine sürü zekası (GWO, PSO) tabanlı optimizasyon yöntemleri ve enerji verimli (Green AI) derin öğrenme stratejileri entegre eden bir araştırmadır. Mimari; Ön İşleme: Gri Kurt Optimizasyonu (GWO) ile adaptif eşikleme, Optimizasyon: Parçacık Sürü Optimizasyonu (PSO) ile hiper-parametre ayarı, Model: U-Net tabanlı segmentasyon, Green AI: Model budama (pruning) ve erken çıkış (early-exit) stratejileri. -><a href="https://github.com/byzakeskin/Galaksi-Segmentasyonunda-S-r-Zekas-Tabanl-Optimizasyon-ve-Green-AI-Yakla-mlar-" style="color: var(--deco-color); text-decoration: underline;" target="_blank">Github</a></p></div>
+            </div>
+            <div class="proj-card">
+              <div class="proj-card-info"><h3>Yapay Zeka Destekli E-Ticaret Ürün Yorum Analiz Sistemi</h3><p>Bu proje, e-ticaret platformlarındaki (Trendyol, Hepsiburada, Amazon vb.) ürün yorumlarını otomatik olarak analiz eden, aspect bazlı duygu analizi yapan ve kullanıcıya özet bilgi sunan bir yapay zeka sistemidir. <a href="https://github.com/byzakeskin/absa_project" style="color: var(--github-color); text-decoration: underline;" target="_blank">Github</a></p></div>
+            </div>
+            <div class="proj-card">
+              <div class="proj-card-info"><h3>Görüntü İşleme Tabanlı CNC Mermer Kesim Sıfır Noktası Tespit Sistemi</h3><p>Mermer endüstrisinde CNC kesim makinelerindeki manuel sıfır noktası belirleme işlemini otomatize eden, OpenCV tabanlı görüntü işleme sistemi. Manuel hizalama süreçlerinde yaşanan; 1-3 mm konum sapmalarını sıfıra indirme, %70-80 hazırlık süresi azaltma, %5-10 fire oranı düşürme, hedeflerini gerçekleştiren akıllı bir vizyon sistemi. -><a href="https://github.com/byzakeskin/mermer-cnc-vision" style="color: var(--deco-color); text-decoration: underline;" target="_blank">Github</a></p></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Web Projeleri -->
+        <div class="proj-grid hidden" id="proj-web">
+          <button class="proj-back" data-back>← Geri</button>
+          <div class="proj-cards">
+            <div class="proj-card">
+              <div class="proj-card-info"><h3>JWT Authentication + Task CRUD API with Express and Swagger</h3><p>JWT kimlik doğrulama (register/login)<br/>Her kullanıcı sadece kendi görevlerini görüntüleme<br/>Admin girişi yapınca tüm kullanıcıların görevlerini görme<br/>Görev oluşturma, düzenleme, silme<br/>Durum: Bekliyor / Devam Ediyor / Tamamlandı<br/>Öncelik: Düşük / Orta / Yüksek<br/>Filtreleme ve arama<br/>Swagger API dökümantasyonu<br/>Modern dark UI, responsive tasarım -><a href="https://github.com/byzakeskin/Task-API-BNK" style="color: var(--deco-color); text-decoration: underline;" target="_blank">Github</a></p></div>
+            </div>
+            <div class="proj-card">
+              <div class="proj-card-img"><img src="/images/main.png" alt="Proje 3" draggable="false"/></div>
+              <div class="proj-card-info"><h3>DropSpot - Exclusive Drop Platform</h3><p>Bekleme listesi ve talep sistemi içeren, sınırlı sayıda üretilen ürün lansmanlarını yönetmeye yönelik modern bir full-stack uygulama. -> <a href="https://github.com/byzakeskin/alpaco" style="color: var(--github-color); text-decoration: underline;" target="_blank">Github</a></p></div>
+            </div>
+            <div class="proj-card">
+              <div class="proj-card-info"><h3>Unity WebGL GPS Experience</h3><p>Bu proje, Unity WebGL üzerinde gerçek zamanlı GPS verilerini alıp, 3D ortamda bir karakteri doğru şekilde konumlandırmayı amaçlar. -> <a href="https://github.com/byzakeskin/CodeMiner-Unity-Developer-Technical-Assessment-Task" style="color: var(--deco-color); text-decoration: underline;" target="_blank">Github</a></p></div>
+            </div>
+            <div class="proj-card">
+              <div class="proj-card-info"><h3>Digital Art Studio</h3><p>Kullanıcının dijital sanat eserlerini sergileyebildiği, ve yönetebildiği web tabanlı bir platform.<br/><br/>Özellikler;<br/>Sanat eserlerini listeleme ve detaylarını görüntüleme<br/>Kullanıcı, admin giriş/çıkış sistemi<br/>Admin yetkisi ile (isteğe bağlı) kullanıcı ekleme, bilgileri düzenleme alanı<br/>Sanatçılara ve kategorilere göre filtreleme alanı<br/>Bootstrap modalları ile sanat eserlerini güncelleme<br/>Şifre gizleme/gösterme fonksiyonu<br/>Responsive tasarım -> <a href="https://github.com/byzakeskin/Digital-Art-Studio" style="color: var(--github-color); text-decoration: underline;" target="_blank">Github</a></p></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Playable Ads -->
+        <div class="proj-grid hidden" id="proj-playable">
+          <button class="proj-back" data-back>← Geri</button>
+          <div class="proj-cards">
+            <div class="proj-card">
+              <div class="proj-card-img"><img src="/images/proj1.jpg" alt="Proje 1" draggable="false"/></div>
+              <div class="proj-card-info"><h3>Proje Adı</h3><p>Açıklama</p></div>
+            </div>
+            <div class="proj-card">
+              <div class="proj-card-img"><img src="/images/proj2.jpg" alt="Proje 2" draggable="false"/></div>
+              <div class="proj-card-info"><h3>Proje Adı</h3><p>Açıklama</p></div>
+            </div>
+            <div class="proj-card">
+              <div class="proj-card-img"><img src="/images/proj3.jpg" alt="Proje 3" draggable="false"/></div>
+              <div class="proj-card-info"><h3>Proje Adı</h3><p>Açıklama</p></div>
+            </div>
+            <div class="proj-card">
+              <div class="proj-card-img"><img src="/images/proj4.jpg" alt="Proje 4" draggable="false"/></div>
+              <div class="proj-card-info"><h3>Proje Adı</h3><p>Açıklama</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+<!-- Yetenekler -->
+      <section id="skills" class="section-panel section-skills">
+        <div id="skills-canvas-container"></div>
+ 
+        <div class="skills-list">
+          <div class="skills-col">
+            <h4>Programming</h4>
+            <p>JavaScript · TypeScript · C# · Python · Java · CFML · SQL · HTML5 · CSS3</p>
+          </div>
+          <div class="skills-col">
+            <h4>Game Dev & Playable Ads</h4>
+            <p>Unity · Unity WebGL · Three.js · 2D/3D Games · Mobile & Hyper-Casual</p>
+          </div>
+          <div class="skills-col">
+            <h4>Frontend</h4>
+            <p>AngularJS · jQuery · Bootstrap · Responsive Design</p>
+          </div>
+          <div class="skills-col">
+            <h4>Backend</h4>
+            <p>FastAPI · REST API · Uvicorn · CFML · SQL Server (MSSQL)</p>
+          </div>
+          <div class="skills-col">
+            <h4>3D & Graphics</h4>
+            <p>Three.js · WebGL · Unity · Rhinoceros · AutoCAD</p>
+          </div>
+          <div class="skills-col">
+            <h4>AI / Machine Learning</h4>
+            <p>Pandas · NumPy · Scikit-learn · TensorFlow · PyTorch · OpenCV · CNN · Image Processing</p>
+          </div>
+          <div class="skills-col">
+            <h4>Tools</h4>
+            <p>Git · GitHub · VS Code · Power BI · Excel · Workcube</p>
+          </div>
+          <div class="skills-col">
+            <h4>Concepts</h4>
+            <p>OOP · Data Structures & Algorithms · Agile/Scrum · MVC · REST APIs · Software Architecture · Clean Code</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- İletişim -->
+      <section id="contact" class="section-panel section-contact">
+        <div class="contact-card">
+          <h2 class="contact-title">İletişim Bilgileri</h2>
+          <p class="contact-sub">Benimle <a href="mailto:keskinbnur@gmail.com" style="color: var(--deco-color)">keskinbnur@gmail.com</a> mail adresiyle veya bu form aracılığıyla doğrudan iletişime geçebilirsiniz.</p>
+
+          <form id="contact-form" class="contact-form">
+            <div class="contact-field">
+              <label>Adınız</label>
+              <input type="text" name="name" placeholder="Adınız Soyadınız" required />
+            </div>
+            <div class="contact-field">
+              <label>E-posta</label>
+              <input type="email" name="email" placeholder="mail@example.com" required />
+            </div>
+            <div class="contact-field">
+              <label>Mesaj</label>
+              <textarea name="message" rows="4" placeholder="Mesajınızı yazın..." required></textarea>
+            </div>
+            <button type="submit" class="contact-btn" id="contact-submit">Gönder</button>
+            <p class="contact-status" id="contact-status"></p>
+          </form>
+        </div>
+      </section>
+
+    </main>
+
+    <footer id="site-footer">
+      <p class="footer-copy">©2026 <span>Beyza Nur Keskin</span> — Tüm hakları saklıdır.</p>
+      <div class="footer-socials">
+        <a href="#" title="GitHub" aria-label="GitHub">
+          <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.089-.745.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.605-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        </a>
+        <a href="#" title="LinkedIn" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="mailto:beyzanurkeskin@protonmail.com" title="Email" aria-label="Email">
+          <svg viewBox="0 0 24 24"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-.9.732-1.636 1.636-1.636h.749L12 11.14l9.615-7.32h.749A1.636 1.636 0 0 1 24 5.457z"/></svg>
+        </a>
+      </div>
+    </footer>
+
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

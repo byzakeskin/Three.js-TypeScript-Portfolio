@@ -15,5 +15,9 @@
     "three": "^0.185.0",
     "typescript": "~6.0.2",
     "vite": "^8.1.0"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "cannon-es": "^0.20.0"
   }
 }
