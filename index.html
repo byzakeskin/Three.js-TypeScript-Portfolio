@@ -38,7 +38,13 @@
         <a href="#contact">İletişim</a>
       </nav>
     </header>
-
+<!-- Playable Modal -->
+<div id="playable-modal" class="playable-modal">
+  <div class="playable-modal-inner">
+    <button class="playable-modal-close" onclick="closePlayable()">✕</button>
+    <iframe id="playable-iframe" src="" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
     <main id="main-content">
 
       <!-- Hakkımda -->
@@ -314,47 +320,25 @@
 
 <!-- Playable Ads -->
 <div class="proj-grid hidden" id="proj-playable">
-  <button class="proj-back" data-back>← Geri</button>
-  <div class="proj-cards proj-cards-playable">
-
-    <div class="proj-card proj-card-playable">
-      <div class="proj-card-iframe">
-        <iframe src="/playable/playable_ad_puzzle.html" scrolling="no" frameborder="0"></iframe>
-      </div>
-      <div class="proj-card-info">
-        <h3>Puzzle Game</h3>
-        <p>HTML5 Playable Ad</p>
+      <button class="proj-back" data-back>← Geri</button>
+ <div class="proj-card proj-card-playable" onclick="openPlayable('/public/playable/playable_ad_puzzle.html')" style="cursor:pointer;">
+    <div class="proj-card-iframe">
+      <img src="/images/2.png" alt="Puzzle" draggable="false"/>
+      <div class="playable-cover-inner">
+        <span class="playable-icon">▶</span>
+        <p>Oynamak için tıkla</p>
       </div>
     </div>
-
-    <div class="proj-card proj-card-playable">
-      <div class="proj-card-iframe">
-        <iframe src="/playable/game2.html" scrolling="no" frameborder="0"></iframe>
-      </div>
-      <div class="proj-card-info">
-        <h3>Proje Adı</h3>
-        <p>HTML5 Playable Ad</p>
-      </div>
+    <div class="proj-card-info">
+      <h3>Puzzle</h3>
+      <p>HTML5 Playable Ad</p>
     </div>
-
-    <div class="proj-card proj-card-playable">
-      <div class="proj-card-iframe">
-        <iframe src="/playable/game3.html" scrolling="no" frameborder="0"></iframe>
-      </div>
-      <div class="proj-card-info">
-        <h3>Proje Adı</h3>
-        <p>HTML5 Playable Ad</p>
-      </div>
-    </div>
-
   </div>
-</div>
       </section>
 
 <!-- Yetenekler -->
       <section id="skills" class="section-panel section-skills">
         <div id="skills-canvas-container"></div>
- 
         <div class="skills-list">
           <div class="skills-col">
             <h4>Programming</h4>

@@ -93,6 +93,8 @@ function closeAll() {
   document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'))
   controls.enabled = true
   currentSection = null
+  stopPlayables()
+  ;(window as any).closePlayable?.()
 }
 
 function openAbout() {
@@ -303,5 +305,44 @@ document.getElementById('contact-form')?.addEventListener('submit', async (e) =>
   } finally {
     btn.disabled = false
     btn.textContent = 'Gönder'
+  }
+})
+
+// Playable ad yükle
+;(window as any).loadPlayable = (cover: HTMLElement, src: string) => {
+  const iframe = cover.nextElementSibling as HTMLIFrameElement
+  iframe.src = src
+  cover.classList.add('hidden')
+}
+
+// Skills section'ı gibi projects kapatılınca iframe'leri temizle
+function stopPlayables() {
+  document.querySelectorAll('.playable-frame').forEach(el => {
+    (el as HTMLIFrameElement).src = ''
+  })
+  document.querySelectorAll('.playable-cover').forEach(el => {
+    el.classList.remove('hidden')
+  })
+}
+
+// Playable modal
+;(window as any).openPlayable = (src: string) => {
+  const modal = document.getElementById('playable-modal')!
+  const iframe = document.getElementById('playable-iframe') as HTMLIFrameElement
+  iframe.src = src
+  modal.classList.add('open')
+}
+
+;(window as any).closePlayable = () => {
+  const modal = document.getElementById('playable-modal')!
+  const iframe = document.getElementById('playable-iframe') as HTMLIFrameElement
+  modal.classList.remove('open')
+  iframe.src = ''  // müzik/ses dursun
+}
+
+// Modal dışına tıklayınca kapat
+document.getElementById('playable-modal')?.addEventListener('click', (e) => {
+  if (e.target === document.getElementById('playable-modal')) {
+    (window as any).closePlayable()
   }
 })
